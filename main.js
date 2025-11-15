@@ -97,6 +97,9 @@ function handleEquals() {
         result = divide(Number(firstNumber), Number(secondNumber));
     }
 
+    result = Math.round(result * 100000000) / 100000000;
+
+
     displayValue = result;
     displayElement.textContent = displayValue;
 }
