@@ -1,6 +1,88 @@
+@font-face {
+    font-family: 'ABC Walter Neue Mono';
+    src: url('assets/ABCWalterNeueMono-Regular.woff2') format('woff2'),
+        url('assets/ABCWalterNeueMono-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+* {
+    box-sizing: border-box;
+}
 
 
+body {
+    background-color: #702512;
+    height: 100vh;
 
+    font-family: 'ABC Walter Neue Mono';
+}
+
+.grid {
+    display: grid;
+    gap: 1rem;
+}
+
+.col-4 {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.calculator-body {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    background-color: #FF00B9;
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 15px;
+}
+
+.total-bar {
+    grid-column-start: 1;
+    grid-column-end: 5;
+
+    display: flex;
+    justify-content: flex-end;
+
+    width: 100%;
+    padding: 1.2rem;
+    border-radius: 15px;
+
+    background-color: #FEE1C5;
+
+}
+
+.button.equals {
+    grid-column-start: 3;
+    grid-column-end: 5;
+
+    width: 100%;
+    background-color: #FFE03A;
+    border-radius: 100px;
+}
+
+.button.clear {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    width: 100%;
+    border-radius: 100px;
+}
+
+.button {
+    background-color: #FEE1C5;
+    border: none;
+    border-radius: 100%;
+
+    text-transform: uppercase;
+    font-family: 'ABC Walter Neue Mono';
+    text-align: center;
+
+    height: 3.75rem;
+    width: 3.75rem;
+}
 
 
 
